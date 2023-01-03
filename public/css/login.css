@@ -1,40 +1,38 @@
 body {
-    width: 100vw;
-    height: 100vh;
-    background: rgb(253, 0, 255);
-    background: linear-gradient(18deg, rgba(253, 0, 255, 1) 2%, rgba(255, 209, 110, 1) 100%);
+  width: 100vw;
+  height: 100vh;
+  background: rgb(253, 0, 255);
+  background: linear-gradient(
+    18deg,
+    rgba(253, 0, 255, 1) 2%,
+    rgba(255, 209, 110, 1) 100%
+  );
 }
-.container{
-    background-color:red;
-    
+.container {
+  background-color: red;
 }
 .container-sm {
-    background-color: rgba(255, 255, 255, 0.2);
-    max-width: 300px;
-    border-radius: 10px;
-    min-height: 250px;
-    
+  background-color: rgba(255, 255, 255, 0.2);
+  max-width: 300px;
+  border-radius: 10px;
+  min-height: 250px;
 }
-
 
 textarea:focus,
 textarea.form-control:focus,
 input.form-control:focus,
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=email]:focus,
-input[type=number]:focus,
-button[type=button]:focus
- {
-    box-shadow: inset 0 0px 0 #ddd;
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+button[type="button"]:focus {
+  box-shadow: inset 0 0px 0 #ddd;
 }
 
-
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }

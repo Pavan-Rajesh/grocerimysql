@@ -1,18 +1,54 @@
 const items = [{
-        id: "dal1",
-        name: "dal",
-        price: 40,
+        id: "pulses1",
+        name: "pulses",
+        price: 30,
         quantity: 0
     }, {
-        id: "puls1",
-        name: "pulses",
-        price: 50,
+        id: "rice1",
+        name: "rice",
+        price: 1200,
+        quantity: 0
+    }, {
+        id: "chocolates1",
+        name: "chocolates",
+        price: 10,
         quantity: 0
     },
     {
-        id: "seneg1",
-        name: "moongdal",
+        id: "bisuits1",
+        name: "biscuits",
+        price: 10,
+        quantity: 0
+    },
+    {
+        id: "soaps1",
+        name: "soaps",
+        price: 30,
+        quantity: 0
+    }, {
+        id: "shampoo1",
+        name: "shampoo",
         price: 50,
+        quantity: 0
+    }, {
+        id: "books1",
+        name: "books",
+        price: 40,
+        quantity: 0
+    }, {
+        id: "pens1",
+        name: "pens",
+        price: 5,
+        quantity: 0
+    }, {
+        id: "handwash1",
+        name: "handwash",
+        price: 70,
+        quantity: 0
+    }, {
+        id: "deodrant1",
+        name: "deodrant",
+        price: 250,
         quantity: 0
     }
 ]
@@ -48,7 +84,7 @@ addbutton.addEventListener('click', function () {
         <h5 class="card-title">${items[t].name}</h5>
         <p class="card-text"></p>
         <div class="d-flex justify-content-evenly align-items-center">
-            <input type="text" class="form-control w-25" value=${items[t].quantity} placeholder="quantity" readonly id=${items[t].id}>
+            <input type="text" class="form-control w-25" value=${items[t].quantity} placeholder="quantity" min="0" readonly id=${items[t].id}>
             <button type="button" onclick="incr('${items[t].id}')"   class="quant">+</button>
             <button type="button" onclick="dcr('${items[t].id}')" class="quant">-</button>
         </div>
@@ -93,7 +129,7 @@ function dcr(x) {
 function calcbill(e) {
     e.preventDefault();
     const calc = document.getElementById("bill");
-    // console.log(calc.childElementCount);
+    // console.log(calc.childElementCount);d
     const num = calc.childElementCount;
     const childs = calc.children;
     // console.log(childs[0]);
