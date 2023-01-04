@@ -30,14 +30,7 @@
                                 <!-- Row start -->
                                 <div class="row gutters">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <div class="custom-actions-btns mb-5">
-                                            <a href="#" class="btn btn-primary">
-                                                <i class="icon-download"></i> Download
-                                            </a>
-                                            <a href="#" class="btn btn-secondary">
-                                                <i class="icon-printer"></i> Print
-                                            </a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <!-- Row end -->
@@ -88,49 +81,49 @@
 
 
                                                 </tr>
-
-                                                <% foo.forEach(element=> { %>
-                                                    <tr>
-                                                        <td>
-                                                            <%= element.pname%>
-                                                        </td>
-                                                        <td>
-                                                            <%=element.pid%>
-                                                        </td>
-                                                        <td>
-                                                            <%=element.quantity%>
-                                                        </td>
-                                                        <td>
-                                                            <%=element.price%>
-                                                        </td>
-                                                    </tr>
-                                                    <% });%>
-
-
-
-
-
+                                                <% var s=0;%>
+                                                    <% foo.forEach(element=> { %>
                                                         <tr>
-                                                            <td>&nbsp;</td>
-                                                            <td colspan="2">
-                                                                <p>
-                                                                    Subtotal<br>
-                                                                    Shipping &amp; Handling<br>
-                                                                    Tax<br>
-                                                                </p>
-                                                                <h5 class="text-success"><strong>Grand
-                                                                        Total</strong></h5>
+                                                            <td>
+                                                                <%= element.pname%>
                                                             </td>
                                                             <td>
-                                                                <p>
-                                                                    $5000.00<br>
-                                                                    $100.00<br>
-                                                                    $49.00<br>
-                                                                </p>
-                                                                <h5 class="text-success"><strong>$5150.99</strong>
-                                                                </h5>
+                                                                <%=element.pid%>
+                                                            </td>
+                                                            <td>
+                                                                <%=element.quantity%>
+                                                            </td>
+                                                            <td>
+                                                                <%=element.price%>
                                                             </td>
                                                         </tr>
+                                                        <% s=s+element.price %>
+
+                                                            <% });%>
+
+
+
+
+
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td colspan="2">
+                                                                        <p>
+
+                                                                        </p>
+                                                                        <h5 class="text-success"><strong>Grand
+                                                                                Total</strong></h5>
+                                                                    </td>
+                                                                    <td>
+                                                                        <p>
+
+                                                                        </p>
+                                                                        <h5 class="text-success"><strong>
+                                                                                <%=s%>
+                                                                            </strong>
+                                                                        </h5>
+                                                                    </td>
+                                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -148,7 +141,7 @@
     </div>
     </div>
 
-    <button onclick="location.href = 'http://localhost:3000/logout';"> logout</button>
+    <button id="logout" onclick="location.href = 'http://localhost:3000/logout';"> logout</button>
 
 </body>
 

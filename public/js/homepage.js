@@ -182,3 +182,9 @@ const fSubmit = document.querySelector("form");
 
 
 fSubmit.addEventListener('submit', calcbill);
+
+
+function dispdetail(x) {
+    const z = document.getElementById(x);
+    x.classList.toggle('show');
+}

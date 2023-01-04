@@ -129,3 +129,12 @@ body {
 .custom-actions-btns .btn {
   margin: 0.3rem 0 0.3rem 0.3rem;
 }
+
+#logout {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  background: #007ae1;
+  height: 40px;
+  margin-left: 600px;
+}

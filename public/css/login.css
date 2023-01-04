@@ -45,3 +45,6 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 50px;
   border-radius: 50px;
 }
+.main {
+  margin-bottom: 70px;
+}
