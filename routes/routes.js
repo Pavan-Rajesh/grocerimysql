@@ -18,9 +18,6 @@ connection.connect();
 
 
 // Home page
-router.get("/checkout", (req, res) => {
-    res.send("this is checkout page");
-})
 
 
 router.get("/homepage", (req, res) => {
@@ -73,6 +70,9 @@ router.post("/homepage", (req, res) => {
             connection.query(`insert into orders (pid,sid,uid,quantity,price,pname)values('${results[0].pid}','sss001','${userid}',${item.quantity},${item.price},'${item.name}')`, function (err, result, fields) {
                 if (err) throw err;
             })
+            connection.query(`insert into sellertable (pid,sid,uid,quantity,price,pname)values('${results[0].pid}','sss001','${userid}',${item.quantity},${item.price},'${item.name}')`, function (err, result, fields) {
+                if (err) throw err;
+            })
         })
         // console.log(item);
         i = i + 1;
@@ -106,6 +106,8 @@ router.post("/", (req, res) => {
                 // : a$ {
                 //     result[0].uid
                 // }
+            } else {
+                res.render('invalid')
             }
         });
 

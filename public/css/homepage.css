@@ -98,8 +98,9 @@ body {
 
 #calc {
   border-radius: 5px;
-  background-color: #e5d9b6;
+  background-color: #c29f37;
   margin-top: 20px;
+  width: 100px;
 }
 
 #calc:hover {
